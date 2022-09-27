@@ -101,13 +101,12 @@ public class BFS {
     public void printPath(Stack<Integer> path){
         final StringBuilder builder = new StringBuilder();
 
-        while (!path.isEmpty()){
+        if (!path.isEmpty()){
             builder.append(path.pop().toString());
         }
 
-        if (!path.isEmpty()) {
-            byte BLANK_SPACE=' '; //？？？
-            builder.append(BLANK_SPACE).append(path.pop());
+        while (!path.isEmpty()) {
+            builder.append(" ").append(path.pop());
         }
 
         System.out.println(builder.toString());
